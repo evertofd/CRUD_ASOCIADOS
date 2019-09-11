@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<%= form_with(model: [ @company, @employee ]) do |form| %>
+<div class="row">
+  <div class="col-6">
+    <div class="form-group">
+      <%= form.label :first_name, "Nombre" %>
+      <%= form.text_field :first_name, :class => 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :last_name, "Apellido" %>
+      <%= form.text_field :last_name, :class => 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :email, "Correo Electronico" %>
+      <%= form.text_field :email, :class => 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= form.label :area, "Correo Electronico" %>
+      <%= form.select :area, Area.pluck(:name, :id) %>
+    </div>
+    <%= form.submit "Guardar", :class => 'btn btn-info' %>
+
+  </div>
+
+</div>
+<% end %>
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
+
+<br/><br/>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <td scope="col">Nombre</td>
+      <td scope="col">Apellido</td>
+      <td scope="col">Email</td>
+      <td scope="col">Area</td>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @company.employees.each do |e| %>
+    <tr>
+      <td><%= e.first_name %></td>
+      <td><%= e.last_name %></td>
+      <td><%= e.email %></td>
+      <td><%= e.area %></td>
+      <td><%= link_to "Eliminar", company_employee_path(@company, e), method: :delete, :class => 'btn btn-danger' %></td>
+    </tr>
+    <% end %>
+  </tbody>
+
+</table>
