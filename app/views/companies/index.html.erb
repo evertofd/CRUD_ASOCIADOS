@@ -1,12 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Companies</h1>
+<h1 class=" text-center">Compañias</h1>
+<br/><br/>
 
-<table>
+<div class="container ">
+
+
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Empresa</th>
       <th>Cantidad de empleados</th>
+      <th>Opciones</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,7 +28,9 @@
     <% end %>
   </tbody>
 </table>
+</div>
+<br/><br/>
 
-<br>
-
-<%= link_to 'New Company', new_company_path, :class => 'btn btn-info' %>
+<div class="text-center">
+  <%= link_to 'New Company', new_company_path, :class => 'btn btn-info' %>
+</div>

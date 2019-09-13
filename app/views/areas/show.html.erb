@@ -1,9 +1,16 @@
+
+<div class="container text-center">
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Name:</strong><br>
+  <br>
   <%= @area.name %>
 </p>
+<br>
+<%= link_to 'Edit', edit_area_path(@area), :class => 'btn btn-success' %> |
+<%= link_to 'Back', areas_path, :class => 'btn btn-info' %>
 
-<%= link_to 'Edit', edit_area_path(@area) %> |
-<%= link_to 'Back', areas_path %>
+</div>

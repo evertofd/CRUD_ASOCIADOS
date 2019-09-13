@@ -1,6 +1,13 @@
-<h1>Editar Compañia</h1>
+<div class="text-center">
 
-<%= render 'form', company: @company %>
 
-<%= link_to 'Show', @company %> |
-<%= link_to 'Back', companies_path %>
+  <h1>Editar Compañia</h1>
+  <br/><br/>
+  <%= render 'form', company: @company %>
+  <br/><br/>
+  <%= link_to 'Show', @company,  :class => 'btn btn-warning' %> |
+  <%= link_to 'Back', companies_path,  :class => 'btn btn-info' %>
+  <br/><br/>
+
+
+</div>

@@ -10,13 +10,15 @@
       </ul>
     </div>
   <% end %>
+  <br>
 
   <div class="field">
-    <%= form.label :name %>
+    <%= form.label :name %><br>
     <%= form.text_field :name, id: :area_name %>
   </div>
+  <br>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit "Guardar", :class => 'btn btn-info' %>
   </div>
 <% end %>

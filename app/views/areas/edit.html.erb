@@ -1,6 +1,12 @@
+<div class="container text-center">
+
+
+
 <h1>Editing Area</h1>
 
 <%= render 'form', area: @area %>
 
-<%= link_to 'Show', @area %> |
-<%= link_to 'Back', areas_path %>
+<%= link_to 'Show', @area,:class => 'btn btn-info' %> |
+<%= link_to 'Back', areas_path, :class => 'btn btn-success' %>
+
+</div>

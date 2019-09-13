@@ -1,5 +1,11 @@
+<div class="container text-center">
+
+
+
 <h1>Nueva Area</h1>
+<br>
+<%= render 'form', area: @area %>|
+<br>
+<%= link_to 'Back', areas_path, :class => 'btn btn-info' %>
 
-<%= render 'form', area: @area %>
-
-<%= link_to 'Back', areas_path %>
+</div>
